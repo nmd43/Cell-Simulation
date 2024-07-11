@@ -1,0 +1,47 @@
+<simulation>
+    <width>5</width>
+    <height>5</height>
+    <gameType>Model Of Segregation</gameType>
+    <title>Model Of Segregation Simulation</title>
+    <author>Thomas Schelling </author>
+    <neighborPercentage>0.6</neighborPercentage>
+    <language>Spanish</language>
+    <description>
+        The Schelling Model of Segregation simulation is a computational model that explores how individual preferences for neighbors of similar characteristics can lead to the emergence of segregated patterns in a population.
+
+        White = Empty
+        Blue = Group A
+        Red = Group B
+        % same neighbors to be satisfied = 60%
+    </description>
+    <grid>
+        <cell row="0" column="0" state="1" />
+        <cell row="0" column="1" state="1" />
+        <cell row="0" column="2" state="2" />
+        <cell row="0" column="3" state="1" />
+        <cell row="0" column="4" state="2" />
+        <cell row="1" column="0" state="0" />
+        <cell row="1" column="1" state="2" />
+        <cell row="1" column="2" state="2" />
+        <cell row="1" column="3" state="2" />
+        <cell row="1" column="4" state="2" />
+        <cell row="2" column="0" state="1" />
+        <cell row="2" column="1" state="1" />
+        <cell row="2" column="2" state="0" />
+        <cell row="2" column="3" state="0" />
+        <cell row="2" column="4" state="0" />
+        <cell row="3" column="0" state="1" />
+        <cell row="3" column="1" state="2" />
+        <cell row="3" column="2" state="1" />
+        <cell row="3" column="3" state="1" />
+        <cell row="3" column="4" state="1" />
+        <cell row="4" column="0" state="1" />
+        <cell row="4" column="1" state="2" />
+        <cell row="4" column="2" state="2" />
+        <cell row="4" column="3" state="0" />
+        <cell row="4" column="4" state="1" />
+    </grid>
+    <parameters>
+        <parameter name="neighborPercentage" value="0.5" />
+    </parameters>
+</simulation>

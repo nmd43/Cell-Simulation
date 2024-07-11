@@ -1,0 +1,51 @@
+<simulation>
+    <width>6</width>
+    <height>6</height>
+    <gameType>GameOfLife</gameType>
+    <title>Conway's Game of Life</title>
+    <author>John Conway, Simon Norton</author>
+    <description>
+        The Game of Life is a cellular automaton devised by John Conway. It is a zero-player game, meaning that its evolution is determined by its initial state, with no further input. This simulation is called the Toad, and it is the second most common oscillator.
+
+        Blue = Alive
+        White = Dead
+    </description>
+    <grid>
+        <cell row="0" column="0" state="0" />
+        <cell row="0" column="1" state="0" />
+        <cell row="0" column="2" state="0" />
+        <cell row="0" column="3" state="0" />
+        <cell row="0" column="4" state="0" />
+        <cell row="0" column="5" state="0" />
+        <cell row="1" column="0" state="0" />
+        <cell row="1" column="1" state="0" />
+        <cell row="1" column="2" state="0" />
+        <cell row="1" column="3" state="0" />
+        <cell row="1" column="4" state="0" />
+        <cell row="1" column="5" state="0" />
+        <cell row="2" column="0" state="0" />
+        <cell row="2" column="1" state="0" />
+        <cell row="2" column="2" state="1" />
+        <cell row="2" column="3" state="1" />
+        <cell row="2" column="4" state="1" />
+        <cell row="2" column="5" state="0" />
+        <cell row="3" column="0" state="0" />
+        <cell row="3" column="1" state="1" />
+        <cell row="3" column="2" state="1" />
+        <cell row="3" column="3" state="1" />
+        <cell row="3" column="4" state="0" />
+        <cell row="3" column="5" state="0" />
+        <cell row="4" column="0" state="0" />
+        <cell row="4" column="1" state="0" />
+        <cell row="4" column="2" state="0" />
+        <cell row="4" column="3" state="0" />
+        <cell row="4" column="4" state="0" />
+        <cell row="4" column="5" state="0" />
+        <cell row="5" column="0" state="0" />
+        <cell row="5" column="1" state="0" />
+        <cell row="5" column="2" state="0" />
+        <cell row="5" column="3" state="0" />
+        <cell row="5" column="4" state="0" />
+        <cell row="5" column="5" state="0" />
+    </grid>
+</simulation>

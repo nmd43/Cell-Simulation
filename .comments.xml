@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+  "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+  "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+  <suppress checks="MissingJavadocMethod" files="."/>
+  <suppress checks="MissingJavadocType" files="."/>
+  <suppress checks="SingleLineJavadoc" files="."/>
+  <suppress checks="JavadocParagraph" files="."/>
+  <suppress checks="JavadocTagContinuationIndentation" files="."/>
+  <suppress checks="SummaryJavadoc" files="."/>
+  <suppress checks="NonEmptyAtclauseDescription" files="."/>
+  <suppress checks="AtclauseOrder" files="."/>
+  <suppress checks="JavadocMethod" files="."/>
+  <suppress checks="JavadocVariable" files="."/>
+  <suppress checks="InvalidJavadocPosition" files="."/>
+  <suppress checks="JavadocStyle" files="."/>
+  <suppress checks="RequireEmptyLineBeforeBlockTagGroup" files="."/>
+
+  <suppress checks="EmptyCatchBlock" files="."/>
+  <suppress checks="VariableDeclarationUsageDistance" files="."/>
+  <suppress checks="OperatorWrap" files="."/>
+  <suppress checks="CommentsIndentation" files="."/>
+</suppressions>

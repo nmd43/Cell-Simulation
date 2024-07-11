@@ -1,0 +1,89 @@
+<simulation>
+    <width>8</width>
+    <height>8</height>
+    <gameType>Spreading of Fire</gameType>
+    <title>Spreading of Fire Simulation</title>
+    <author>B Drossel, F Schwabl </author>
+    <probFillTree>0.4</probFillTree>
+    <probCatch>0.2</probCatch>
+    <language>French</language>
+    <description>
+        The Spreading of Fire simulation models the dynamic propagation of fire in a forest, with cells representing empty spaces, living trees, or burning trees. Trees can catch fire from neighboring burning cells or spontaneously ignite, while empty spaces may be filled with new trees.
+
+        White = Empty
+        Green = Tree
+        Red = Fire
+        Chance of empty land growing a tree = 40%
+        Chance of tree catching fire = 20%
+    </description>
+    <grid>
+        <cell row="0" column="0" state="1" />
+        <cell row="0" column="1" state="1" />
+        <cell row="0" column="2" state="1" />
+        <cell row="0" column="3" state="1" />
+        <cell row="0" column="4" state="1" />
+        <cell row="0" column="5" state="1" />
+        <cell row="0" column="6" state="1" />
+        <cell row="0" column="7" state="1" />
+        <cell row="1" column="0" state="1" />
+        <cell row="1" column="1" state="1" />
+        <cell row="1" column="2" state="1" />
+        <cell row="1" column="3" state="1" />
+        <cell row="1" column="4" state="1" />
+        <cell row="1" column="5" state="1" />
+        <cell row="1" column="6" state="1" />
+        <cell row="1" column="7" state="1" />
+        <cell row="2" column="0" state="1" />
+        <cell row="2" column="1" state="1" />
+        <cell row="2" column="2" state="2" />
+        <cell row="2" column="3" state="1" />
+        <cell row="2" column="4" state="1" />
+        <cell row="2" column="5" state="1" />
+        <cell row="2" column="6" state="1" />
+        <cell row="2" column="7" state="1" />
+        <cell row="3" column="0" state="1" />
+        <cell row="3" column="1" state="2" />
+        <cell row="3" column="2" state="0" />
+        <cell row="3" column="3" state="0" />
+        <cell row="3" column="4" state="0" />
+        <cell row="3" column="5" state="1" />
+        <cell row="3" column="6" state="1" />
+        <cell row="3" column="7" state="1" />
+        <cell row="4" column="0" state="1" />
+        <cell row="4" column="1" state="1" />
+        <cell row="4" column="2" state="2" />
+        <cell row="4" column="3" state="0" />
+        <cell row="4" column="4" state="1" />
+        <cell row="4" column="5" state="1" />
+        <cell row="4" column="6" state="1" />
+        <cell row="4" column="7" state="1" />
+        <cell row="5" column="0" state="1" />
+        <cell row="5" column="1" state="1" />
+        <cell row="5" column="2" state="1" />
+        <cell row="5" column="3" state="2" />
+        <cell row="5" column="4" state="1" />
+        <cell row="5" column="5" state="1" />
+        <cell row="5" column="6" state="1" />
+        <cell row="5" column="7" state="1" />
+        <cell row="6" column="0" state="1" />
+        <cell row="6" column="1" state="1" />
+        <cell row="6" column="2" state="1" />
+        <cell row="6" column="3" state="1" />
+        <cell row="6" column="4" state="1" />
+        <cell row="6" column="5" state="1" />
+        <cell row="6" column="6" state="1" />
+        <cell row="6" column="7" state="1" />
+        <cell row="7" column="0" state="1" />
+        <cell row="7" column="1" state="1" />
+        <cell row="7" column="2" state="1" />
+        <cell row="7" column="3" state="1" />
+        <cell row="7" column="4" state="1" />
+        <cell row="7" column="5" state="1" />
+        <cell row="7" column="6" state="1" />
+        <cell row="7" column="7" state="1" />
+    </grid>
+    <parameters>
+        <parameter name="probCatch" value="0.2" />
+        <parameter name="probFillTree" value="0.4" />
+    </parameters>
+</simulation>

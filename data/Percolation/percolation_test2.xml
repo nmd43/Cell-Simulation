@@ -1,0 +1,81 @@
+<simulation>
+    <width>8</width>
+    <height>8</height>
+    <gameType>Percolation</gameType>
+    <title>Percolation Simulation</title>
+    <author>Mohammad Khanjary</author>
+    <language>French</language>
+    <description>
+        A percolation simulation models the flow of fluid through a porous medium, such as a network of interconnected pores.
+
+        White = Empty
+        Black = Blocked
+        Blue = Water
+    </description>
+    <grid>
+        <cell row="0" column="0" state="1" />
+        <cell row="0" column="1" state="0" />
+        <cell row="0" column="2" state="1" />
+        <cell row="0" column="3" state="1" />
+        <cell row="0" column="4" state="1" />
+        <cell row="0" column="5" state="0" />
+        <cell row="0" column="6" state="1" />
+        <cell row="0" column="7" state="1" />
+        <cell row="1" column="0" state="0" />
+        <cell row="1" column="1" state="1" />
+        <cell row="1" column="2" state="0" />
+        <cell row="1" column="3" state="1" />
+        <cell row="1" column="4" state="0" />
+        <cell row="1" column="5" state="1" />
+        <cell row="1" column="6" state="0" />
+        <cell row="1" column="7" state="1" />
+        <cell row="2" column="0" state="0" />
+        <cell row="2" column="1" state="1" />
+        <cell row="2" column="2" state="0" />
+        <cell row="2" column="3" state="1" />
+        <cell row="2" column="4" state="0" />
+        <cell row="2" column="5" state="1" />
+        <cell row="2" column="6" state="0" />
+        <cell row="2" column="7" state="1" />
+        <cell row="3" column="0" state="0" />
+        <cell row="3" column="1" state="1" />
+        <cell row="3" column="2" state="0" />
+        <cell row="3" column="3" state="1" />
+        <cell row="3" column="4" state="0" />
+        <cell row="3" column="5" state="1" />
+        <cell row="3" column="6" state="0" />
+        <cell row="3" column="7" state="1" />
+        <cell row="4" column="0" state="0" />
+        <cell row="4" column="1" state="1" />
+        <cell row="4" column="2" state="0" />
+        <cell row="4" column="3" state="1" />
+        <cell row="4" column="4" state="0" />
+        <cell row="4" column="5" state="1" />
+        <cell row="4" column="6" state="0" />
+        <cell row="4" column="7" state="1" />
+        <cell row="5" column="0" state="2" />
+        <cell row="5" column="1" state="1" />
+        <cell row="5" column="2" state="0" />
+        <cell row="5" column="3" state="1" />
+        <cell row="5" column="4" state="0" />
+        <cell row="5" column="5" state="1" />
+        <cell row="5" column="6" state="0" />
+        <cell row="5" column="7" state="1" />
+        <cell row="6" column="0" state="0" />
+        <cell row="6" column="1" state="1" />
+        <cell row="6" column="2" state="0" />
+        <cell row="6" column="3" state="1" />
+        <cell row="6" column="4" state="0" />
+        <cell row="6" column="5" state="1" />
+        <cell row="6" column="6" state="0" />
+        <cell row="6" column="7" state="1" />
+        <cell row="7" column="0" state="0" />
+        <cell row="7" column="1" state="1" />
+        <cell row="7" column="2" state="1" />
+        <cell row="7" column="3" state="0" />
+        <cell row="7" column="4" state="1" />
+        <cell row="7" column="5" state="1" />
+        <cell row="7" column="6" state="1" />
+        <cell row="7" column="7" state="0" />
+    </grid>
+</simulation>

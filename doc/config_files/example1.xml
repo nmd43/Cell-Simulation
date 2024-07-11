@@ -1,0 +1,21 @@
+<game>
+    <gameType>GameofLife</gameType>
+    <title> Blinker</title>
+    <author>Conway + Team 6</author>
+    <description>Cellular Automata based on the Game of Life.</description>
+    <width>50</width>
+    <height>50</height>
+    <cells>
+        <cell>
+            <row> 0 </row>
+            <column> 0 </column>
+            <state> 0 </state>
+        </cell>
+        <cell>
+            <row> 0 </row>
+            <column> 1 </column>
+            <state> 1 </state>
+        </cell>
+        etc……
+    </cells>
+</game>

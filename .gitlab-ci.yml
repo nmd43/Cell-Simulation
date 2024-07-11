@@ -1,0 +1,53 @@
+image: $cellsociety_docker_image
+
+stages:
+  - validate
+  - report
+
+analyze_codebase:
+  stage: validate
+  when: always
+  script:
+    - "mvn checkstyle:checkstyle || true"
+    - "mvn pmd:pmd -Dformat=net.sourceforge.pmd.renderers.CodeClimateRenderer || true"
+    - "mvn pmd:cpd || true"
+
+    # consolidate the reports
+    - |
+      /report_as_codequality \
+        --cpd-file target/cpd.xml \
+        --pmd-file target/pmd.json \
+        --checkstyle-file target/checkstyle-result.xml \
+        --output-file target/codequality.json
+
+    # after generating the reports, fail the step if they didn't pass
+    - mvn checkstyle:check pmd:check pmd:cpd-check -DfailOnViolation=true
+  artifacts:
+    when: always
+    paths:
+      - target/codequality.json
+    reports:
+      codequality: target/codequality.json
+
+docs:
+  stage: report
+  when: always
+  script:
+    - "mvn javadoc:javadoc -DfailOnError=false || true"
+    - mvn site:site
+  artifacts:
+    paths:
+      - target/site
+
+pages:
+  stage: report
+  when: always
+  needs:
+    - docs
+  script:
+    - mv target/site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

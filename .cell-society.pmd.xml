@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRuleset"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+  <description>
+    PMD ruleset for CellSociety based on the CellSociety design requirements.
+  </description>
+
+  <!-- DESIGN-01 - Multiple Classes -->
+  <!-- None -->
+
+  <!-- DESIGN-02 - Named Constants -->
+  <!-- None - enforced through checkstyle -->
+
+  <!-- DESIGN-03 - DRY -->
+  <!-- None - enforced through CPD -->
+
+  <!-- DESIGN-04 - Tightly Scoped Methods -->
+  <rule ref="category/java/design.xml/NPathComplexity">
+    <priority>1</priority>
+    <properties>
+      <property name="reportLevel" value="200"/>
+    </properties>
+  </rule>
+  <rule ref="category/java/design.xml/CyclomaticComplexity">
+    <priority>1</priority>
+    <properties>
+      <property name="methodReportLevel" value="15"/>
+      <property name="classReportLevel" value="1000"/>
+    </properties>
+  </rule>
+  <rule ref="category/java/design.xml/CognitiveComplexity">
+    <priority>1</priority>
+    <properties>
+      <property name="reportLevel" value="15"/>
+    </properties>
+  </rule>
+
+  <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
+    <priority>2</priority>
+    <properties>
+      <property name="problemDepth" value="3"/>
+    </properties>
+  </rule>
+  <rule ref="category/java/design.xml/ExcessiveParameterList">
+    <priority>2</priority>
+    <properties>
+      <property name="minimum" value="7"/>
+    </properties>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/ForLoopVariableCount">
+    <priority>2</priority>
+    <properties>
+      <property name="maximumVariables" value="1"/>
+    </properties>
+  </rule>
+
+  <!-- DESIGN-05 - Code Formatting -->
+  <!-- None - enforced through checkstyle -->
+
+  <!-- DESIGN-06 - Interact Through Methods -->
+  <!-- None -->
+
+  <!-- DESIGN-07 - Comments -->
+  <!-- None - enforced through checkstyle -->
+
+  <!-- DESIGN-08 - Incremental Delivery -->
+  <!-- None -->
+
+  <!-- DESIGN-09 - Model-View Separation -->
+  <rule name="AvoidJavaFXImportsInModelPackages"
+    language="java"
+    message="JavaFX packages should only be used in the View (view package). The model should be agnostic of how it is displayed."
+    class="net.sourceforge.pmd.lang.rule.XPathRule">
+    <description>
+      This rule identifies if a class within 'model', '*.model', or '*.model.*' packages is
+      importing anything from the javafx package.
+    </description>
+    <priority>1</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+          <![CDATA[
+                        //CompilationUnit[
+                            (PackageDeclaration/Name[contains(@Image, '.model')] or
+                            PackageDeclaration/Name[@Image = 'model'])
+                            and
+                            .//ImportDeclaration[contains(@ImportedName, 'javafx.')]
+                        ]
+                    ]]>
+        </value>
+      </property>
+    </properties>
+  </rule>
+
+  <!-- DESIGN-10 - Encapsulation -->
+  <rule ref="category/java/bestpractices.xml/LooseCoupling">
+    <priority>2</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/ArrayIsStoredDirectly">
+    <priority>2</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/MethodReturnsInternalArray">
+    <priority>2</priority>
+  </rule>
+
+  <!-- DESIGN-11 - Inheritance -->
+  <rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod">
+    <priority>1</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/MissingOverride">
+    <priority>2</priority>
+  </rule>
+  <rule ref="category/java/codestyle.xml/CallSuperInConstructor">
+    <priority>2</priority>
+  </rule>
+  <rule ref="category/java/errorprone.xml/OverrideBothEqualsAndHashcode">
+    <priority>2</priority>
+  </rule>
+
+  <!-- DESIGN-12 - Externalize Configuration -->
+  <rule name="AvoidMagicNumbers"
+    language="java"
+    message="Avoid using magic numbers in the code."
+    class="net.sourceforge.pmd.lang.rule.XPathRule">
+    <description>
+      Magic numbers are numbers that occur multiple time in code without an explanatory name.
+      This rule excludes -1, 0, 1, and 2 which are commonly used in a non-magic context.
+    </description>
+    <priority>1</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+          <![CDATA[
+                  //Literal/Number[not(@Image = '-1' or @Image = '0' or @Image = '1' or @Image = '2')]
+                ]]>
+        </value>
+      </property>
+    </properties>
+  </rule>
+  <rule name="AvoidLiteralHexColorCodes"
+    language="java"
+    message="Avoid using literal hex color codes in the code. Consider using a constant or resource instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule">
+    <description>
+      This rule finds instances where hex color codes are used directly in the code, which can make
+      maintenance more difficult and the code less readable.
+    </description>
+    <priority>2</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+          <![CDATA[
+                  //StringLiteral[matches(@Image, '^"#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})"$')]
+                ]]>
+        </value>
+      </property>
+    </properties>
+  </rule>
+  <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
+    <priority>2</priority>
+    <properties>
+      <property name="maxDuplicateLiterals" value="3"/>
+    </properties>
+  </rule>
+
+  <!-- DESIGN-13 - No Dead Code -->
+  <rule ref="category/java/bestpractices.xml/UnusedAssignment">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/UnusedFormalParameter">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/UnusedLocalVariable">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/UnusedPrivateField">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/codestyle.xml/EmptyControlStatement">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/codestyle.xml/UnnecessaryImport">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/codestyle.xml/UnnecessarySemicolon">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/errorprone.xml/UnconditionalIfStatement">
+    <priority>3</priority>
+  </rule>
+  <rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals">
+    <priority>3</priority>
+  </rule>
+
+</ruleset>

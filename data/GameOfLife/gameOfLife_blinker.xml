@@ -1,0 +1,40 @@
+<simulation>
+    <width>5</width>
+    <height>5</height>
+    <gameType>GameOfLife</gameType>
+    <title>Conway's Game of Life</title>
+    <author>John Conway</author>
+    <description>
+        The Game of Life is a cellular automaton devised by John Conway. It is a zero-player game, meaning that its evolution is determined by its initial state, with no further input. This simulation is called the Blinker, and it is the smallest and most common oscillator.
+
+        Blue = Alive
+        White = Dead
+    </description>
+    <grid>
+        <cell row="0" column="0" state="0" />
+        <cell row="0" column="1" state="0" />
+        <cell row="0" column="2" state="0" />
+        <cell row="0" column="3" state="0" />
+        <cell row="0" column="4" state="0" />
+        <cell row="1" column="0" state="0" />
+        <cell row="1" column="1" state="0" />
+        <cell row="1" column="2" state="0" />
+        <cell row="1" column="3" state="0" />
+        <cell row="1" column="4" state="0" />
+        <cell row="2" column="0" state="0" />
+        <cell row="2" column="1" state="1" />
+        <cell row="2" column="2" state="1" />
+        <cell row="2" column="3" state="1" />
+        <cell row="2" column="4" state="0" />
+        <cell row="3" column="0" state="0" />
+        <cell row="3" column="1" state="0" />
+        <cell row="3" column="2" state="0" />
+        <cell row="3" column="3" state="0" />
+        <cell row="3" column="4" state="0" />
+        <cell row="4" column="0" state="0" />
+        <cell row="4" column="1" state="0" />
+        <cell row="4" column="2" state="0" />
+        <cell row="4" column="3" state="0" />
+        <cell row="4" column="4" state="0" />
+    </grid>
+</simulation>
